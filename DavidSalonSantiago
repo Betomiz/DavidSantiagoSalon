@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Santiago Salón</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- Configuración de Colores --- */
+        :root {
+            --bg-color: #1a1a1a;        /* Fondo oscuro suave */
+            --text-main: #f0f0f0;       /* Texto casi blanco */
+            --text-secondary: #b0b0b0;  /* Texto gris */
+            --accent: #8FA87A;          /* Verde Orgánico (Sage Green) */
+            --btn-border: rgba(255, 255, 255, 0.2);
+            --btn-hover-bg: #f0f0f0;
+            --btn-hover-text: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Degradado sutil de fondo */
+            background-image: radial-gradient(circle at top, #252525 0%, #111111 100%);
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* --- Tipografía y Títulos --- */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: var(--accent); /* Color verde orgánico */
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Bloque de dirección y teléfono */
+        .info-block {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info-block p {
+            margin: 5px 0;
+        }
+
+        /* --- Botones --- */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 15px 20px;
+            background-color: transparent;
+            border: 1px solid var(--btn-border);
+            border-radius: 50px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn i {
+            position: absolute;
+            left: 20px;
+            font-size: 1.3rem;
+        }
+
+        .btn:hover {
+            background-color: var(--accent); /* Al pasar el mouse se pone verde */
+            border-color: var(--accent);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(143, 168, 122, 0.3); /* Sombra verde sutil */
+        }
+
+        /* Botón de WhatsApp destacado (opcional) */
+        .btn.whatsapp:hover {
+            background-color: #25D366;
+            border-color: #25D366;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.75rem;
+            color: #555;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Ajustes para pantallas pequeñas */
+        @media (max-width: 400px) {
+            h1 { font-size: 2rem; }
+            .tagline { font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>David Santiago Salón</h1>
+        <p class="tagline">🌱 Organic Hair</p>
+        
+        <div class="description">
+            <p>✨ Especialistas en: Color, corte, peinado, maquillaje.</p>
+            <p>✂️ Salon & Barber shop</p>
+        </div>
+
+        <div class="info-block">
+            <p><i class="fas fa-map-marker-alt" style="color: var(--accent);"></i> Plaza EL EDÉN - Loc. 19, planta alta.</p>
+            <p style="margin-top:8px;"><i class="fas fa-phone" style="color: var(--accent);"></i> 221 119 1800</p>
+        </div>
+
+        <div class="links">
+            <a href="https://wa.me/522211191800" target="_blank" class="btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                Agendar Cita (WhatsApp)
+            </a>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Plaza+EL+EDEN+Puebla" target="_blank" class="btn maps">
+                <i class="fas fa-map-marked-alt"></i>
+                Ver Ubicación (Maps)
+            </a>
+
+            <a href="https://www.instagram.com/davidsantiagosalon?igsh=bGF1cGNjNnpzYWxs&utm_source=qr" target="_blank" class="btn instagram">
+                <i class="fab fa-instagram"></i>
+                Instagram
+            </a>
+
+            <a href="https://www.facebook.com/share/1GQhZGeuuj/?mibextid=wwXIfr" target="_blank" class="btn facebook">
+                <i class="fab fa-facebook-f"></i>
+                Facebook
+            </a>
+
+            <a href="https://www.tiktok.com/@davidsantiagosalon?_r=1&_t=ZS-93GGdMsafLO" target="_blank" class="btn tiktok">
+                <i class="fab fa-tiktok"></i>
+                TikTok
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 David Santiago Salón</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
