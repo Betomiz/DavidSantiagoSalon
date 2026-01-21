@@ -12,10 +12,10 @@
     <style>
         /* --- Configuración de Colores --- */
         :root {
-            --bg-color: #1a1a1a;        /* Fondo oscuro suave */
-            --text-main: #f0f0f0;       /* Texto casi blanco */
-            --text-secondary: #b0b0b0;  /* Texto gris */
-            --accent: #8FA87A;          /* Verde Orgánico (Sage Green) */
+            --bg-color: #1a1a1a;
+            --text-main: #f0f0f0;
+            --text-secondary: #b0b0b0;
+            --accent: #8FA87A; /* Verde Orgánico */
             --btn-border: rgba(255, 255, 255, 0.2);
             --btn-hover-bg: #f0f0f0;
             --btn-hover-text: #1a1a1a;
@@ -35,7 +35,6 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            /* Degradado sutil de fondo */
             background-image: radial-gradient(circle at top, #252525 0%, #111111 100%);
             padding: 20px;
         }
@@ -47,7 +46,7 @@
             animation: fadeIn 1s ease-in-out;
         }
 
-        /* --- Tipografía y Títulos --- */
+        /* --- Tipografía --- */
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
@@ -58,7 +57,7 @@
 
         .tagline {
             font-size: 1rem;
-            color: var(--accent); /* Color verde orgánico */
+            color: var(--accent);
             font-weight: 600;
             margin-bottom: 5px;
             text-transform: uppercase;
@@ -73,7 +72,6 @@
             font-weight: 300;
         }
 
-        /* Bloque de dirección y teléfono */
         .info-block {
             background: rgba(255, 255, 255, 0.05);
             padding: 15px;
@@ -117,18 +115,21 @@
         }
 
         .btn:hover {
-            background-color: var(--accent); /* Al pasar el mouse se pone verde */
+            background-color: var(--accent);
             border-color: var(--accent);
             color: #ffffff;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(143, 168, 122, 0.3); /* Sombra verde sutil */
+            box-shadow: 0 5px 15px rgba(143, 168, 122, 0.3);
         }
 
-        /* Botón de WhatsApp destacado (opcional) */
-        .btn.whatsapp:hover {
-            background-color: #25D366;
-            border-color: #25D366;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        /* Estilo especial para el botón principal (Agendar) */
+        .btn.primary {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .btn.primary:hover {
+            background-color: var(--accent);
+            color: #ffffff;
         }
 
         footer {
@@ -142,7 +143,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Ajustes para pantallas pequeñas */
         @media (max-width: 400px) {
             h1 { font-size: 2rem; }
             .tagline { font-size: 0.85rem; }
@@ -167,14 +167,19 @@
         </div>
 
         <div class="links">
+            <a href="https://confirmafy.com/davidsantiagosalon" target="_blank" class="btn primary">
+                <i class="fas fa-calendar-check"></i>
+                Agendar Cita
+            </a>
+
             <a href="https://wa.me/522211191800" target="_blank" class="btn whatsapp">
                 <i class="fab fa-whatsapp"></i>
-                Agendar Cita (WhatsApp)
+                WhatsApp
             </a>
 
             <a href="https://www.google.com/maps/search/?api=1&query=Plaza+EL+EDEN+Puebla" target="_blank" class="btn maps">
                 <i class="fas fa-map-marked-alt"></i>
-                Ver Ubicación (Maps)
+                Ver Ubicación
             </a>
 
             <a href="https://www.instagram.com/davidsantiagosalon?igsh=bGF1cGNjNnpzYWxs&utm_source=qr" target="_blank" class="btn instagram">
@@ -194,7 +199,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2024 David Santiago Salón</p>
+            <p>© 2024 David Santiago Salón</p>
         </footer>
 
     </div>
